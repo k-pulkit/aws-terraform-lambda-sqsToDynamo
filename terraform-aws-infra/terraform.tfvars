@@ -1,3 +1,5 @@
-
+aws_region        = "us-east-1"
+lambda_name       = "message-processor"
 queue_name        = "Messages"
 lambda_source_dir = "../src/python/"
+table_name        = "messages"

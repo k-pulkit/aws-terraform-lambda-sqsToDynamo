@@ -14,3 +14,11 @@ output "LambdaARN" {
 output "LambdaLogs" {
   value = module.lambda.LambdaLogs
 }
+
+output "DynamoARN" {
+  value = module.dynamodb.DynamoARN
+}
+
+output "TableName" {
+  value = module.dynamodb.TableName
+}

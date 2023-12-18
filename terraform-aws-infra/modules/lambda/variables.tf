@@ -14,6 +14,11 @@ variable "sqs_queue_arn" {
   type        = string
 }
 
+variable "dynamodb_arn" {
+  description = "ARN of the Dynamo table to put data"
+  type        = string
+}
+
 variable "source_dir" {
   description = "Source dir of the lambda code"
   type        = string

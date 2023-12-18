@@ -2,7 +2,6 @@
 variable "aws_region" {
   description = "Region of aws project"
   type        = string
-  default     = "aws-east-1"
 }
 
 variable "resource_tags" {
@@ -15,8 +14,18 @@ variable "resource_tags" {
   }
 }
 
+variable "lambda_name" {
+  default = "Name of lambda function"
+  type    = string
+}
+
 variable "queue_name" {
   description = "Name of the SQS queue to deploy"
+  type        = string
+}
+
+variable "table_name" {
+  description = "Name of dynamo table"
   type        = string
 }
 

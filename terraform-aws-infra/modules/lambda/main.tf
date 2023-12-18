@@ -16,11 +16,11 @@ resource "aws_lambda_function" "this" {
   role             = aws_iam_role.this.arn
   handler          = "index.handler"
   runtime          = "python3.8"
-  tags = var.resource_tags
+  tags             = var.resource_tags
 }
 
 resource "aws_cloudwatch_log_group" "lambda_logs" {
   name              = "/aws/lambda/${aws_lambda_function.this.function_name}"
   retention_in_days = 1
-  tags = var.resource_tags
+  tags              = var.resource_tags
 }
