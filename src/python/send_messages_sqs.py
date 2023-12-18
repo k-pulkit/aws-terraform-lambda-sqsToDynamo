@@ -45,6 +45,6 @@ if __name__ == '__main__':
         log.info(f"Message sent: {resp['MessageId']} ::> {message}")
         i += 1
         # wait
-        sleep(int(args.interval))
+        sleep(float(args.interval))
 
     log.info("Ending Program")
