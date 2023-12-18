@@ -18,14 +18,14 @@ data "aws_iam_policy_document" "sqsdynamoaccess_lambda" {
     sid       = "RestrictedSQSForLambda"
     effect    = "Allow"
     actions   = ["sqs:GetQueueAttributes", "sqs:ReceiveMessage", "sqs:DeleteMessage"]
-    resources = [var.sqs_queue_arn]
+    resources = [data.aws_sqs_queue.that.arn]
   }
 
   statement {
     sid       = "RestrictedDynamoForLambda"
     effect    = "Allow"
     actions   = ["dynamodb:*"]
-    resources = [var.dynamodb_arn]
+    resources = [data.aws_dynamodb_table.that.arn]
   }
 
   statement {

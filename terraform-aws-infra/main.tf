@@ -16,9 +16,10 @@ module "dynamodb" {
 }
 
 module "lambda" {
-  source        = "./modules/lambda"
-  source_dir    = var.lambda_source_dir
-  sqs_queue_arn = module.sqs.QueueARN
-  dynamodb_arn  = module.dynamodb.DynamoARN
-  resource_tags = var.resource_tags
+  source         = "./modules/lambda"
+  lambda_name    = var.lambda_name
+  source_dir     = var.lambda_source_dir
+  sqs_queue_name = module.sqs.QueueName
+  dynamodb_name  = module.dynamodb.TableName
+  resource_tags  = var.resource_tags
 }

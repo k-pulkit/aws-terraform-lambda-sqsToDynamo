@@ -9,13 +9,13 @@ variable "lambda_name" {
   default     = "TestLambda"
 }
 
-variable "sqs_queue_arn" {
-  description = "ARN of the SQS queue which is event source"
+variable "sqs_queue_name" {
+  description = "Name of the SQS queue which is event source"
   type        = string
 }
 
-variable "dynamodb_arn" {
-  description = "ARN of the Dynamo table to put data"
+variable "dynamodb_name" {
+  description = "Name of the Dynamo table to put data"
   type        = string
 }
 
