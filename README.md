@@ -1,4 +1,5 @@
-# Project Name: Terraform AWS Infrastructure Automation - SQS to DynamoDb with lambda
+# Project Name: Terraform AWS Infrastructure Automation
+### SQS to DynamoDb with lambda
 
 ## Description
 This is a terraform project, built to practice as well as showcase my terraform skills. In this project I have build a basic pipeline to stream messages coming from SQS queue into a dynamodb table. The architecture is event driven with the help of lambda severless processing.
